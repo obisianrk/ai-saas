@@ -109,7 +109,8 @@ export const getImageSize = (
   return image?.[dimension] || 1000;
 };
 
-// DOWNLOAD IMAGE
+//[x] DOWNLOAD IMAGE
+//^ https://medium.com/charisol-community/downloading-resources-in-html5-a-download-may-not-work-as-expected-bf63546e2baa
 export const download = (url: string, filename: string) => {
   if (!url) {
     throw new Error("Resource URL not provided! You need to provide one");
@@ -119,6 +120,7 @@ export const download = (url: string, filename: string) => {
     .then((response) => response.blob())
     .then((blob) => {
       const blobURL = URL.createObjectURL(blob);
+
       const a = document.createElement("a");
       a.href = blobURL;
 
@@ -132,7 +134,7 @@ export const download = (url: string, filename: string) => {
 
 // DEEP MERGE OBJECTS
 export const deepMergeObjects = (obj1: any, obj2: any) => {
-  if(obj2 === null || obj2 === undefined) {
+  if (obj2 === null || obj2 === undefined) {
     return obj1;
   }
 

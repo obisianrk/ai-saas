@@ -1,4 +1,5 @@
-Clerk - Authentication and Manage account | 
+clerk - Authentication and Manage account | 
 shad-cn - ui components | 
-Clerk WebHook - to add user data from clerk to our database | 
-
+clerk webHook - to add user data from clerk to our database | 
+cloudinary - for AI apis
+stripe - for payments 
