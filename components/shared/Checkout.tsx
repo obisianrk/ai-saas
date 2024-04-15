@@ -2,9 +2,7 @@
 
 import { loadStripe } from "@stripe/stripe-js";
 import { useEffect } from "react";
-
 import { useToast } from "@/components/ui/use-toast";
-import { checkoutCredits } from "@/lib/actions/transaction.action";
 
 import { Button } from "../ui/button";
 
@@ -55,7 +53,15 @@ const Checkout = ({
       buyerId,
     };
 
-    await checkoutCredits(transaction);
+    toast({
+      title: "Payment module is still in progress",
+      description:
+        "We appreciate your patience and will notify you as soon as it's ready",
+      duration: 5000,
+      className: "error-toast",
+    });
+
+    // await checkoutCredits(transaction);
   };
 
   return (
@@ -64,7 +70,7 @@ const Checkout = ({
         <Button
           type="submit"
           role="link"
-          className="w-full rounded-full bg-purple-gradient bg-cover"
+          className="w-full bg-cover rounded-full bg-purple-gradient"
         >
           Buy Credit
         </Button>
