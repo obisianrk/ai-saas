@@ -17,7 +17,7 @@ const Sidebar = () => {
           <Image
             src="/assets/images/logo-text.svg"
             alt="logo"
-            width={180}
+            width={135}
             height={28}
           />
         </Link>
@@ -41,8 +41,8 @@ const Sidebar = () => {
                       <Image
                         src={link.icon}
                         alt="logo"
-                        width={24}
-                        height={24}
+                        width={20}
+                        height={20}
                         className={`${isActive && "brightness-200"}`}
                       />
                       {link.label}
@@ -68,8 +68,8 @@ const Sidebar = () => {
                       <Image
                         src={link.icon}
                         alt="logo"
-                        width={24}
-                        height={24}
+                        width={20}
+                        height={20}
                         className={`${isActive && "brightness-200"}`}
                       />
                       {link.label}
@@ -78,7 +78,7 @@ const Sidebar = () => {
                 );
               })}
 
-              <li className="gap-2 p-4 cursor-pointer flex-center">
+              <li className="gap-2 p-2 cursor-pointer flex-center">
                 <UserButton afterSignOutUrl="/" showName />
               </li>
             </ul>

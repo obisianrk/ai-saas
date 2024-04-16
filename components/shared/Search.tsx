@@ -40,8 +40,8 @@ export const Search = () => {
       <Image
         src="/assets/icons/search.svg"
         alt="search"
-        width={24}
-        height={24}
+        width={20}
+        height={20}
       />
 
       <Input

@@ -26,9 +26,9 @@ const Credits = async () => {
         <ul className="credits-list">
           {plans.map((plan) => (
             <li key={plan.name} className="credits-item">
-              <div className="flex-center flex-col gap-3">
-                <Image src={plan.icon} alt="check" width={50} height={50} />
-                <p className="p-20-semibold mt-2 text-purple-500">
+              <div className="flex-col gap-3 flex-center">
+                <Image src={plan.icon} alt="check" width={40} height={40} />
+                <p className="mt-2 text-purple-500 p-20-semibold">
                   {plan.name}
                 </p>
                 <p className="h1-semibold text-dark-600">${plan.price}</p>
@@ -47,8 +47,8 @@ const Credits = async () => {
                         inclusion.isIncluded ? "check.svg" : "cross.svg"
                       }`}
                       alt="check"
-                      width={24}
-                      height={24}
+                      width={20}
+                      height={20}
                     />
                     <p className="p-16-regular">{inclusion.label}</p>
                   </li>
